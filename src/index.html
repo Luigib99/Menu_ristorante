@@ -1,13 +1,243 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="it">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <title>Ristorante</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    .luogo-immagine {
+      margin: 40px;
+      width: 500px;
+      height: 300px;
+      box-shadow: 0 10px 8px black;
+    }
+
+    .ordini {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .piatto-container {
+      margin: 30px;
+      text-align: center;
+      background-color: aliceblue;
+      margin-bottom: 100px;
+      margin-top: 50px;
+      border-radius: 10px;
+      border-color: black;
+      box-shadow: 0 5px 5px black;
+    }
+
+    .portata-container {}
+
+    .piatto-nome {
+      font-size: 20px;
+      font-family: "poppins", serif;
+      margin-bottom: 40px;
+    }
+
+    .piatto-immagine {
+      max-width: 300px;
+      height: 300px;
+      margin: 20px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
-  <app-root></app-root>
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <div class="container-fluid" style="font-family: Inter, sans-serif; font-size: 20px">
+    <a class="navbar-brand" href="#" style="font-weight: bold;margin-right: 40px; margin-left: 20px">RISTORANTE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 40px">
+            Piatti
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#antipasti">Antipasti</a></li>
+            <li><a class="dropdown-item" href="#primi">Primi</a></li>
+            <li><a class="dropdown-item" href="#secondi">Secondi</a></li>
+            <li><a class="dropdown-item" href="#dolci">Dolci</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Menu della casa</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="margin-right: 40px">Contatti</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dove siamo</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="intro" style="background-color: #f8f9fa; padding: 50px 0; margin-top: 50px">
+  <div class="container text-center">
+    <h1 style="font-size: 50px; font-family: 'Poppins', sans-serif; color: #333;">Benvenuti al Ristorante</h1>
+    <p style="font-size: 20px; font-family: 'Poppins', sans-serif; color: #555; max-width: 800px; margin: 20px auto;">
+      Scopri l'autentica cucina italiana nel cuore della città. Al nostro ristorante, ogni piatto è preparato con passione,
+      utilizzando solo ingredienti freschi e di alta qualità. Siamo pronti ad offrirti un'esperienza culinaria unica e memorabile,
+      con piatti tradizionali e innovativi che conquisteranno il tuo palato.
+    </p>
+    <a href="#antipasti" class="btn btn-primary btn-lg" style="font-family: 'Poppins', sans-serif; margin-top: 30px; margin-bottom: 20px">Scopri il nostro menu</a>
+  </div>
+  <div class="d-flex flex-row">
+    <img class="luogo-immagine" src="https://cdn.blastness.biz/media/1033/top-mirabelle/thumbs/full/night.jpg">
+    <img class="luogo-immagine" src="https://traianorestaurant.com/wp-content/uploads/2023/03/sala-principale-1-900x604.jpg">
+    <img class="luogo-immagine" src="https://media-cdn.tripadvisor.com/media/photo-s/0d/45/bf/59/esterno-del-ristorante.jpg">
+  </div>
+</section>
+
+<div class="ordini">
+  <div class="d-flex flex-column">
+    <div class="portata-container" id="antipasti">
+      <p style="margin-left: 40px; margin-top: 70px; font-size: 40px; font-family: poppins, serif">ANTIPASTI</p>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+        <div class="col mb-4">
+          <div class="piatto-container">
+            <img class="piatto-immagine" src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty">
+            <p class="piatto-nome">RISO ALLO ZAFFERANO</p>
+            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="piatto-container">
+            <img class="piatto-immagine" src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920">
+            <p class="piatto-nome">LASAGNE</p>
+            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="piatto-container">
+            <img class="piatto-immagine" src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg">
+            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
+            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="piatto-container">
+            <img class="piatto-immagine" src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg">
+            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
+            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-column">
+    <div class="portata-container" id="primi">
+      <p style="margin-left: 40px; margin-top: 70px; font-size: 40px; font-family: poppins, serif">PRIMI</p>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+        <div class="col mb-4">
+          <div class="piatto-container">
+            <img class="piatto-immagine" src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty">
+            <p class="piatto-nome">RISO ALLO ZAFFERANO</p>
+            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="piatto-container">
+            <img class="piatto-immagine" src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920">
+            <p class="piatto-nome">LASAGNE</p>
+            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+          </div>
+        </div>
+      </div>
+        <div class="col mb-4">
+          <div class="piatto-container">
+            <img class="piatto-immagine" src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg">
+            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
+            <button class="btn btn-primary"style="margin-bottom: 20px"v>DETTAGLI</button>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="piatto-container">
+            <img class="piatto-immagine" src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg">
+            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
+            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="d-flex flex-column">
+    <div class="portata-container" id="secondi">
+      <p style="margin-left: 40px; margin-top: 70px; font-size: 40px; font-family: poppins, serif">SECONDI</p>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+        <div class="col mb-4">
+          <div class="piatto-container">
+            <img class="piatto-immagine" src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty">
+            <p class="piatto-nome">RISO ALLO ZAFFERANO</p>
+            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="piatto-container">
+            <img class="piatto-immagine" src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920">
+            <p class="piatto-nome">LASAGNE</p>
+            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="piatto-container">
+            <img class="piatto-immagine" src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg">
+            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
+            <button class="btn btn-primary" style="margin-bottom: 20px">DETTAGLI</button>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="piatto-container">
+            <img class="piatto-immagine" src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg">
+            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
+            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-column">
+      <div class="portata-container" id="dolci">
+        <p style="margin-left: 40px; margin-top: 70px; font-size: 40px; font-family: poppins, serif">DOLCI</p>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+          <div class="col mb-4">
+            <div class="piatto-container">
+              <img class="piatto-immagine" src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty">
+              <p class="piatto-nome">RISO ALLO ZAFFERANO</p>
+              <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="piatto-container">
+              <img class="piatto-immagine" src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920">
+              <p class="piatto-nome">LASAGNE</p>
+              <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="piatto-container">
+              <img class="piatto-immagine" src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg">
+              <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
+              <button class="btn btn-primary" style="margin-bottom: 20px">DETTAGLI</button>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="piatto-container">
+              <img class="piatto-immagine" src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg">
+              <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
+              <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
