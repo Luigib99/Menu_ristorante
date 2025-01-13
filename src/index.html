@@ -6,11 +6,19 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <title>Ristorante</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .foto-luogo-container{
+      margin-top: 40px;
+    }
     .luogo-immagine {
-      margin: 40px;
-      width: 500px;
+      width: 100%;
       height: 300px;
-      box-shadow: 0 10px 8px black;
+      /*box-shadow: 0 10px 8px black;*/
+      display: block;
+      object-fit: cover;
     }
 
     .ordini {
@@ -19,30 +27,39 @@
       align-content: center;
     }
 
+    .portata-container {
+      padding: 50px ;
+    }
+
+    .card-piatto {
+      padding: 0 20px;
+    }
+
     .piatto-container {
-      margin: 30px;
+      height: 440px;
       text-align: center;
       background-color: aliceblue;
-      margin-bottom: 100px;
+      margin-bottom: 50px;
       margin-top: 50px;
       border-radius: 10px;
       border-color: black;
       box-shadow: 0 5px 5px black;
+      padding: 20px;
+      position: relative;
     }
-
-    .portata-container {}
 
     .piatto-nome {
       font-size: 20px;
       font-family: "poppins", serif;
-      margin-bottom: 40px;
+      margin-top: 10px;
     }
 
     .piatto-immagine {
-      max-width: 300px;
+      display: block;
+      width: 100%;
       height: 300px;
-      margin: 20px;
       object-fit: cover;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -89,143 +106,306 @@
     </p>
     <a href="#antipasti" class="btn btn-primary btn-lg" style="font-family: 'Poppins', sans-serif; margin-top: 30px; margin-bottom: 20px">Scopri il nostro menu</a>
   </div>
-  <div class="d-flex flex-row">
-    <img class="luogo-immagine" src="https://cdn.blastness.biz/media/1033/top-mirabelle/thumbs/full/night.jpg">
-    <img class="luogo-immagine" src="https://traianorestaurant.com/wp-content/uploads/2023/03/sala-principale-1-900x604.jpg">
-    <img class="luogo-immagine" src="https://media-cdn.tripadvisor.com/media/photo-s/0d/45/bf/59/esterno-del-ristorante.jpg">
+  <div class="foto-luogo-container">
+    <div class="row p-0 m-0 g-3">
+      <div class="col-12 col-sm-12 col-md-4">
+        <img class="luogo-immagine" src="https://cdn.blastness.biz/media/1033/top-mirabelle/thumbs/full/night.jpg">
+      </div>
+      <div class="col-12 col-sm-12 col-md-4">
+        <img class="luogo-immagine" src="https://traianorestaurant.com/wp-content/uploads/2023/03/sala-principale-1-900x604.jpg">
+      </div>
+      <div class="col-12 col-sm-12 col-md-4">
+        <img class="luogo-immagine" src="https://media-cdn.tripadvisor.com/media/photo-s/0d/45/bf/59/esterno-del-ristorante.jpg">
+      </div>
+    </div>
   </div>
 </section>
 
+<!--ORDINI-->
 <div class="ordini">
   <div class="d-flex flex-column">
+    <!--ANTIPASTI-->
     <div class="portata-container" id="antipasti">
       <p style="margin-left: 40px; margin-top: 70px; font-size: 40px; font-family: poppins, serif">ANTIPASTI</p>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty">
-            <p class="piatto-nome">RISO ALLO ZAFFERANO</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+      <div class="row">
+
+        <!--RISO ALLO ZAFFERANO-->
+        <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+          <div class="card-piatto">
+            <div class="piatto-container" style="position: relative;">
+              <img class="piatto-immagine"
+                   src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty">
+              <p class="piatto-nome">RISO ALLO ZAFFERANO</p>
+              <button class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#riso-zafferano-modal"
+                      style="position: absolute; bottom: 10px; right: 20px;">
+                DETTAGLI
+              </button>
+            </div>
           </div>
         </div>
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920">
-            <p class="piatto-nome">LASAGNE</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+        <!--dettagli ampliati-->
+        <div class="modal fade" id="riso-zafferano-modal" tabindex="-1" aria-labelledby="riso-zafferano-modal-label" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <!--finestra-->
+            <div class="modal-content"style="height: 100%; width:100%" >
+              <!--titolo-->
+              <div class="modal-header">
+                <h5 class="modal-title" id="riso-zafferano-modal-label" style="font-size: 25px">RISO ALLO ZAFFERANO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!--carosello-->
+                <div id="carousel-riso-zafferano" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <!-- Immagine 1 -->
+                    <div class="carousel-item active">
+                      <img src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty"
+                           class="d-block w-100"
+                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+                    </div>
+                    <!-- Immagine 2 -->
+                    <div class="carousel-item">
+                      <img src="https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2022/10/risotto-allo-zafferano.jpg"
+                           class="d-block w-100"
+                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+                    </div>
+                    <!-- Immagine 3 -->
+                    <div class="carousel-item">
+                      <img src="https://www.fattoincasadabenedetta.it/wp-content/uploads/2024/04/risotto-allo-zafferano-sito-5.jpg"
+                           class="d-block w-100"
+                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+                    </div>
+                  </div>
+                  <!-- Controlli del carosello -->
+                  <!--indietro-->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carousel-riso-zafferano" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Precedente</span>
+                  </button>
+                  <!--avanti-->
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-riso-zafferano" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Successivo</span>
+                  </button>
+                </div>
+                <!-- Fine del carosello -->
+                <!--testo dettagli-->
+                <p>Dettagli del piatto: Riso cucinato con zafferano e altri ingredienti freschi...</p>
+                <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >10€</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg">
-            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+
+        <!--LASAGNA-->
+        <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+          <div class="card-piatto">
+            <div class="piatto-container" style="position: relative;">
+              <img class="piatto-immagine"
+                   src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920">
+              <p class="piatto-nome">LASAGNA</p>
+              <button class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#lasagna-modal"
+                      style="position: absolute; bottom: 10px; right: 20px;">
+                DETTAGLI
+              </button>
+            </div>
           </div>
         </div>
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg">
-            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+        <!--dettagli ampliati-->
+        <div class="modal fade" id="lasagna-modal" tabindex="-1" aria-labelledby="lasagna-modal-label" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <!--finestra-->
+            <div class="modal-content"style="height: 100%; width:100%" >
+              <!--titolo-->
+              <div class="modal-header">
+                <h5 class="modal-title" id="lasagna-modal-label" style="font-size: 25px">LASAGNA</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!--carosello-->
+                <div id="carousel-lasagna" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <!-- Immagine 1 -->
+                    <div class="carousel-item active">
+                      <img src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920"
+                           class="d-block w-100"
+                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+                    </div>
+                    <!-- Immagine 2 -->
+                    <div class="carousel-item">
+                      <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipes%2F2024-11-lasagna-recipe%2Flasagna-recipe-115"
+                           class="d-block w-100"
+                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+                    </div>
+                    <!-- Immagine 3 -->
+                    <div class="carousel-item">
+                      <img src="https://newmansown.com/wp-content/uploads/2022/03/Homemade-lasagna.png"
+                           class="d-block w-100"
+                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+                    </div>
+                  </div>
+                  <!-- Controlli del carosello -->
+                  <!--indietro-->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#ccarousel-lasagna" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Precedente</span>
+                  </button>
+                  <!--avanti-->
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-lasagna" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Successivo</span>
+                  </button>
+                </div>
+                <!-- Fine del carosello -->
+                <!--testo dettagli-->
+                <p>pasta sfoglia, carne macinata, salsa béchamel, pomodoro, cipolla, e parmigiano</p>
+                <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >12€</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="portata-container" id="primi">
-      <p style="margin-left: 40px; margin-top: 70px; font-size: 40px; font-family: poppins, serif">PRIMI</p>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty">
-            <p class="piatto-nome">RISO ALLO ZAFFERANO</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+
+        <!--RISOTTO ALLA CREMA DI SCAMPI-->
+        <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+          <div class="card-piatto">
+            <div class="piatto-container" style="position: relative;">
+              <img class="piatto-immagine"
+                   src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg">
+              <p class="piatto-nome">RISOTTO ALLA CREMA DI SCAMPI</p>
+              <button class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#riso-scampi-modal"
+                      style="position: absolute; bottom: 10px; right: 20px;">
+                DETTAGLI
+              </button>
+            </div>
           </div>
         </div>
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920">
-            <p class="piatto-nome">LASAGNE</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+        <!--dettagli ampliati-->
+        <div class="modal fade" id="riso-scampi-modal" tabindex="-1" aria-labelledby="riso-scampi-modal-label" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <!--finestra-->
+            <div class="modal-content"style="height: 100%; width:100%" >
+              <!--titolo-->
+              <div class="modal-header">
+                <h5 class="modal-title" id="riso-scampi-modal-label" style="font-size: 25px">RISOTTO ALLA CREMA DI SCAMPI</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!--carosello-->
+                <div id="carousel-riso-scampi" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <!-- Immagine 1 -->
+                    <div class="carousel-item active">
+                      <img src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg"
+                           class="d-block w-100"
+                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+                    </div>
+                    <!-- Immagine 2 -->
+                    <div class="carousel-item">
+                      <img src="https://blog.giallozafferano.it/nocemoscata/wp-content/uploads/2015/11/RISOTTO-CREMA-SCAMPI-FB-1-1.jpg"
+                           class="d-block w-100"
+                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+                    </div>
+                    <!-- Immagine 3 -->
+                    <div class="carousel-item">
+                      <img src="https://www.moltofood.it/wp-content/uploads/2023/10/risotto-crema-scampi-riso-primo-primi.jpg"
+                           class="d-block w-100"
+                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+                    </div>
+                  </div>
+                  <!-- Controlli del carosello -->
+                  <!--indietro-->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#ccarousel-riso-scampi" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Precedente</span>
+                  </button>
+                  <!--avanti-->
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-riso-scampi" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Successivo</span>
+                  </button>
+                </div>
+                <!-- Fine del carosello -->
+                <!--testo dettagli-->
+                <p>Riso, scampi freschi, brodo di pesce, delicata crema preparata con panna, burro e vino bianco</p>
+                <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >14€</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg">
-            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+
+        <!--RISOTTO AI FUNGHI-->
+        <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+          <div class="card-piatto">
+            <div class="piatto-container" style="position: relative;">
+              <img class="piatto-immagine"
+                   src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg">
+              <p class="piatto-nome">RISOTTO AI FUNGHI</p>
+              <button class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#riso-funghi-modal"
+                      style="position: absolute; bottom: 10px; right: 20px;">
+                DETTAGLI
+              </button>
+            </div>
           </div>
         </div>
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg">
-            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portata-container" id="secondi">
-      <p style="margin-left: 40px; margin-top: 70px; font-size: 40px; font-family: poppins, serif">SECONDI</p>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty">
-            <p class="piatto-nome">RISO ALLO ZAFFERANO</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920">
-            <p class="piatto-nome">LASAGNE</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg">
-            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg">
-            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portata-container" id="dolci">
-      <p style="margin-left: 40px; margin-top: 70px; font-size: 40px; font-family: poppins, serif">DOLCI</p>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty">
-            <p class="piatto-nome">RISO ALLO ZAFFERANO</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920">
-            <p class="piatto-nome">LASAGNE</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg">
-            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="piatto-container">
-            <img class="piatto-immagine" src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg">
-            <p class="piatto-nome">RISO CREMA DI SCAMPI</p>
-            <button class="btn btn-primary"style="margin-bottom: 20px">DETTAGLI</button>
+        <!--dettagli ampliati-->
+        <div class="modal fade" id="riso-funghi-modal" tabindex="-1" aria-labelledby="riso-funghi-modal-label" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <!--finestra-->
+            <div class="modal-content"style="height: 100%; width:100%" >
+              <!--titolo-->
+              <div class="modal-header">
+                <h5 class="modal-title" id="riso-funghi-modal-label" style="font-size: 25px">RISOTTO AI FUNGHI</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!--carosello-->
+                <div id="carousel-riso-funghi" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <!-- Immagine 1 -->
+                    <div class="carousel-item active">
+                      <img src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg"
+                           class="d-block w-100"
+                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+                    </div>
+                    <!-- Immagine 2 -->
+                    <div class="carousel-item">
+                      <img src="https://www.chezuppa.com/wp-content/uploads/2021/10/risotto-funghi-porcini02.jpg"
+                           class="d-block w-100"
+                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+                    </div>
+                    <!-- Immagine 3 -->
+                    <div class="carousel-item">
+                      <img src="https://lh5.googleusercontent.com/proxy/nesAXiNmBPHKaNDr51ThMl6Ox8wSOAmD-gC-rlCKAMKJ49Jq1po0uQJil-ml13iPyS_7iUUQk7SASxOrLH1dyeR-WFhItakW_rz0NRt8y9X8nQ6eEKZc1XKm"
+                           class="d-block w-100"
+                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+                    </div>
+                  </div>
+                  <!-- Controlli del carosello -->
+                  <!--indietro-->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#ccarousel-riso-funghi" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Precedente</span>
+                  </button>
+                  <!--avanti-->
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-riso-funghi" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Successivo</span>
+                  </button>
+                </div>
+                <!-- Fine del carosello -->
+                <!--testo dettagli-->
+                <p>riso Arborio, funghi freschi, brodo vegetale, burro, cipolla, vino bianco e parmigiano grattugiato</p>
+                <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >12€</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
