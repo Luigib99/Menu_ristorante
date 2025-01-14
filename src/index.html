@@ -9,7 +9,6 @@
     * {
       box-sizing: border-box;
     }
-
     .foto-luogo-container{
       margin-top: 40px;
     }
@@ -28,7 +27,15 @@
     }
 
     .portata-container {
-      padding: 50px ;
+      padding: 0px ;
+    }
+
+    .portata-titolo{
+      font-size: 80px;
+      font-family: poppins, serif;
+      font-weight: bold;
+      text-align: center;
+      background-color: grey;
     }
 
     .card-piatto {
@@ -124,294 +131,939 @@
 <!--ORDINI-->
 <div class="ordini">
   <div class="d-flex flex-column">
+
     <!--ANTIPASTI-->
     <div class="portata-container" id="antipasti">
-      <p style="margin-left: 40px; margin-top: 70px; font-size: 40px; font-family: poppins, serif">ANTIPASTI</p>
-      <div class="row">
-
-        <!--RISO ALLO ZAFFERANO-->
-        <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
-          <div class="card-piatto">
-            <div class="piatto-container" style="position: relative;">
-              <img class="piatto-immagine"
-                   src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty">
-              <p class="piatto-nome">RISO ALLO ZAFFERANO</p>
-              <button class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#riso-zafferano-modal"
-                      style="position: absolute; bottom: 10px; right: 20px;">
-                DETTAGLI
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--dettagli ampliati-->
-        <div class="modal fade" id="riso-zafferano-modal" tabindex="-1" aria-labelledby="riso-zafferano-modal-label" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <!--finestra-->
-            <div class="modal-content"style="height: 100%; width:100%" >
-              <!--titolo-->
-              <div class="modal-header">
-                <h5 class="modal-title" id="riso-zafferano-modal-label" style="font-size: 25px">RISO ALLO ZAFFERANO</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <!--carosello-->
-                <div id="carousel-riso-zafferano" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <!-- Immagine 1 -->
-                    <div class="carousel-item active">
-                      <img src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty"
-                           class="d-block w-100"
-                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
-                    </div>
-                    <!-- Immagine 2 -->
-                    <div class="carousel-item">
-                      <img src="https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2022/10/risotto-allo-zafferano.jpg"
-                           class="d-block w-100"
-                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
-                    </div>
-                    <!-- Immagine 3 -->
-                    <div class="carousel-item">
-                      <img src="https://www.fattoincasadabenedetta.it/wp-content/uploads/2024/04/risotto-allo-zafferano-sito-5.jpg"
-                           class="d-block w-100"
-                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
-                    </div>
+      <div style="padding: 100px 0">
+        <p class="portata-titolo">ANTIPASTI</p>
+        <div style="background-image: url(https://images.pexels.com/photos/17910326/pexels-photo-17910326.jpeg?cs=srgb&dl=pexels-nadja-17910326.jpg&fm=jpg);
+           background-size: cover;
+           background-position: center center;
+           background-repeat: no-repeat">
+          <div style="padding: 20px 80px;">
+            <div class="row">
+              <!--BRUSCHETTE-->
+              <div class="col-12 col-sm-12 col-md-6 col-xl-4 p-0">
+                <div class="card-piatto">
+                  <div class="piatto-container" style="position: relative;">
+                    <img class="piatto-immagine"
+                         src="https://www.giallozafferano.it/images/ricette/223/22329/foto_hd/hd650x433_wm.jpg">
+                    <p class="piatto-nome">BRUSCHETTE MISTE</p>
+                    <button class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bruschette-modal"
+                            style="position: absolute; bottom: 10px; right: 20px;">
+                      DETTAGLI
+                    </button>
                   </div>
-                  <!-- Controlli del carosello -->
-                  <!--indietro-->
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carousel-riso-zafferano" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Precedente</span>
-                  </button>
-                  <!--avanti-->
-                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-riso-zafferano" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Successivo</span>
-                  </button>
                 </div>
-                <!-- Fine del carosello -->
-                <!--testo dettagli-->
-                <p>Dettagli del piatto: Riso cucinato con zafferano e altri ingredienti freschi...</p>
-                <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >10€</p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <!--LASAGNA-->
-        <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
-          <div class="card-piatto">
-            <div class="piatto-container" style="position: relative;">
-              <img class="piatto-immagine"
-                   src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920">
-              <p class="piatto-nome">LASAGNA</p>
-              <button class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#lasagna-modal"
-                      style="position: absolute; bottom: 10px; right: 20px;">
-                DETTAGLI
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--dettagli ampliati-->
-        <div class="modal fade" id="lasagna-modal" tabindex="-1" aria-labelledby="lasagna-modal-label" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <!--finestra-->
-            <div class="modal-content"style="height: 100%; width:100%" >
-              <!--titolo-->
-              <div class="modal-header">
-                <h5 class="modal-title" id="lasagna-modal-label" style="font-size: 25px">LASAGNA</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <!--carosello-->
-                <div id="carousel-lasagna" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <!-- Immagine 1 -->
-                    <div class="carousel-item active">
-                      <img src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920"
-                           class="d-block w-100"
-                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
-                    </div>
-                    <!-- Immagine 2 -->
-                    <div class="carousel-item">
-                      <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipes%2F2024-11-lasagna-recipe%2Flasagna-recipe-115"
-                           class="d-block w-100"
-                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
-                    </div>
-                    <!-- Immagine 3 -->
-                    <div class="carousel-item">
-                      <img src="https://newmansown.com/wp-content/uploads/2022/03/Homemade-lasagna.png"
-                           class="d-block w-100"
-                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
-                    </div>
+              <!--ANTIPASTI DI MARE-->
+              <div class="col-12 col-sm-12 col-md-6 col-xl-4 p-0">
+                <div class="card-piatto">
+                  <div class="piatto-container" style="position: relative;">
+                    <img class="piatto-immagine"
+                         src="https://blog.giallozafferano.it/eleme/wp-content/uploads/2020/02/Antipasto-di-pesce-10-gusti.png">
+                    <p class="piatto-nome">ANTIPASTI DI MARE</p>
+                    <button class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#antipasti-mare-modal"
+                            style="position: absolute; bottom: 10px; right: 20px;">
+                      DETTAGLI
+                    </button>
                   </div>
-                  <!-- Controlli del carosello -->
-                  <!--indietro-->
-                  <button class="carousel-control-prev" type="button" data-bs-target="#ccarousel-lasagna" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Precedente</span>
-                  </button>
-                  <!--avanti-->
-                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-lasagna" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Successivo</span>
-                  </button>
                 </div>
-                <!-- Fine del carosello -->
-                <!--testo dettagli-->
-                <p>pasta sfoglia, carne macinata, salsa béchamel, pomodoro, cipolla, e parmigiano</p>
-                <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >12€</p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <!--RISOTTO ALLA CREMA DI SCAMPI-->
-        <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
-          <div class="card-piatto">
-            <div class="piatto-container" style="position: relative;">
-              <img class="piatto-immagine"
-                   src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg">
-              <p class="piatto-nome">RISOTTO ALLA CREMA DI SCAMPI</p>
-              <button class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#riso-scampi-modal"
-                      style="position: absolute; bottom: 10px; right: 20px;">
-                DETTAGLI
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--dettagli ampliati-->
-        <div class="modal fade" id="riso-scampi-modal" tabindex="-1" aria-labelledby="riso-scampi-modal-label" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <!--finestra-->
-            <div class="modal-content"style="height: 100%; width:100%" >
-              <!--titolo-->
-              <div class="modal-header">
-                <h5 class="modal-title" id="riso-scampi-modal-label" style="font-size: 25px">RISOTTO ALLA CREMA DI SCAMPI</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <!--carosello-->
-                <div id="carousel-riso-scampi" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <!-- Immagine 1 -->
-                    <div class="carousel-item active">
-                      <img src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg"
-                           class="d-block w-100"
-                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
-                    </div>
-                    <!-- Immagine 2 -->
-                    <div class="carousel-item">
-                      <img src="https://blog.giallozafferano.it/nocemoscata/wp-content/uploads/2015/11/RISOTTO-CREMA-SCAMPI-FB-1-1.jpg"
-                           class="d-block w-100"
-                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
-                    </div>
-                    <!-- Immagine 3 -->
-                    <div class="carousel-item">
-                      <img src="https://www.moltofood.it/wp-content/uploads/2023/10/risotto-crema-scampi-riso-primo-primi.jpg"
-                           class="d-block w-100"
-                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
-                    </div>
+              <!--ANTIPASTI DI TERRA-->
+              <div class="col-12 col-sm-12 col-md-6 col-xl-4 p-0">
+                <div class="card-piatto">
+                  <div class="piatto-container" style="position: relative;">
+                    <img class="piatto-immagine"
+                         src="https://media-cdn.tripadvisor.com/media/photo-s/0f/1c/d3/d2/antipasto-misto-di-terra.jpg">
+                    <p class="piatto-nome">ANTIPASTI DI TERRA</p>
+                    <button class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#antipasti-terra-modal"
+                            style="position: absolute; bottom: 10px; right: 20px;">
+                      DETTAGLI
+                    </button>
                   </div>
-                  <!-- Controlli del carosello -->
-                  <!--indietro-->
-                  <button class="carousel-control-prev" type="button" data-bs-target="#ccarousel-riso-scampi" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Precedente</span>
-                  </button>
-                  <!--avanti-->
-                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-riso-scampi" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Successivo</span>
-                  </button>
                 </div>
-                <!-- Fine del carosello -->
-                <!--testo dettagli-->
-                <p>Riso, scampi freschi, brodo di pesce, delicata crema preparata con panna, burro e vino bianco</p>
-                <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >14€</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!--RISOTTO AI FUNGHI-->
-        <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
-          <div class="card-piatto">
-            <div class="piatto-container" style="position: relative;">
-              <img class="piatto-immagine"
-                   src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg">
-              <p class="piatto-nome">RISOTTO AI FUNGHI</p>
-              <button class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#riso-funghi-modal"
-                      style="position: absolute; bottom: 10px; right: 20px;">
-                DETTAGLI
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--dettagli ampliati-->
-        <div class="modal fade" id="riso-funghi-modal" tabindex="-1" aria-labelledby="riso-funghi-modal-label" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <!--finestra-->
-            <div class="modal-content"style="height: 100%; width:100%" >
-              <!--titolo-->
-              <div class="modal-header">
-                <h5 class="modal-title" id="riso-funghi-modal-label" style="font-size: 25px">RISOTTO AI FUNGHI</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <!--carosello-->
-                <div id="carousel-riso-funghi" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <!-- Immagine 1 -->
-                    <div class="carousel-item active">
-                      <img src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg"
-                           class="d-block w-100"
-                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
-                    </div>
-                    <!-- Immagine 2 -->
-                    <div class="carousel-item">
-                      <img src="https://www.chezuppa.com/wp-content/uploads/2021/10/risotto-funghi-porcini02.jpg"
-                           class="d-block w-100"
-                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
-                    </div>
-                    <!-- Immagine 3 -->
-                    <div class="carousel-item">
-                      <img src="https://lh5.googleusercontent.com/proxy/nesAXiNmBPHKaNDr51ThMl6Ox8wSOAmD-gC-rlCKAMKJ49Jq1po0uQJil-ml13iPyS_7iUUQk7SASxOrLH1dyeR-WFhItakW_rz0NRt8y9X8nQ6eEKZc1XKm"
-                           class="d-block w-100"
-                           style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
-                    </div>
-                  </div>
-                  <!-- Controlli del carosello -->
-                  <!--indietro-->
-                  <button class="carousel-control-prev" type="button" data-bs-target="#ccarousel-riso-funghi" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Precedente</span>
-                  </button>
-                  <!--avanti-->
-                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-riso-funghi" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Successivo</span>
-                  </button>
-                </div>
-                <!-- Fine del carosello -->
-                <!--testo dettagli-->
-                <p>riso Arborio, funghi freschi, brodo vegetale, burro, cipolla, vino bianco e parmigiano grattugiato</p>
-                <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >12€</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!--PRIMI-->
+    <div class="portata-container" id="primi" style="position: relative;">
+      <p class="portata-titolo">PRIMI</p>
+      <div class ="primi-container">
+        <!--CAROSELLO PRIMI-->
+        <div id="carousel-primi" class="carousel slide">
+          <div class="carousel-inner">
+            <!--PASTA-->
+            <div class="carousel-item active"
+                 style="background-image: url(https://images.pexels.com/photos/1487511/pexels-photo-1487511.jpeg?cs=srgb&dl=pexels-enginakyurt-1487511.jpg&fm=jpg);
+                 background-size: cover;
+                 background-position: center center;
+                 background-repeat: no-repeat;">
+              <p style="font-size: 40px; font-family: Poppins sans-serif; text-align: center; color: #f8f9fa">PASTA</p>
+              <div style="padding: 20px 80px;">
+                <div class="row">
+                  <!--LASAGNA-->
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+                    <div class="card-piatto">
+                      <div class="piatto-container" style="position: relative;">
+                        <img class="piatto-immagine"
+                             src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920">
+                        <p class="piatto-nome">LASAGNA</p>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#lasagna-modal"
+                                style="position: absolute; bottom: 10px; right: 20px;">
+                          DETTAGLI
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--PASTA CACIO E PEPE-->
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+                    <div class="card-piatto">
+                      <div class="piatto-container" style="position: relative;">
+                        <img class="piatto-immagine"
+                             src="https://blog.giallozafferano.it/dulcisinforno/wp-content/uploads/2021/01/Pasta-cacio-e-pepe-2634.jpg">
+                        <p class="piatto-nome">PASTA CACIO E PEPE</p>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#pasta-cacio-pepe-modal"
+                                style="position: absolute; bottom: 10px; right: 20px;">
+                          DETTAGLI
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!--PASTA AMATRICIANA-->
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+                    <div class="card-piatto">
+                      <div class="piatto-container" style="position: relative;">
+                        <img class="piatto-immagine"
+                             src="https://www.giallozafferano.it/images/219-21923/Spaghetti-all-Amatriciana_650x433_wm.jpg">
+                        <p class="piatto-nome">PASTA ALL'AMATRICIANA</p>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#pasta-amatriciana-modal"
+                                style="position: absolute; bottom: 10px; right: 20px;">
+                          DETTAGLI
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--PASTA CARBONARA-->
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+                    <div class="card-piatto">
+                      <div class="piatto-container" style="position: relative;">
+                        <img class="piatto-immagine"
+                             src="https://www.cucchiaio.it/content/cucchiaio/it/ricette/2009/11/ricetta-spaghetti-carbonara/_jcr_content/header-par/image_single.img.jpg/1617198167116.jpg">
+                        <p class="piatto-nome">PASTA ALLA CARBONARA</p>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#carbonara-modal"
+                                style="position: absolute; bottom: 10px; right: 20px;">
+                          DETTAGLI
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--RISO-->
+            <div class="carousel-item"
+                 style="background-image: url(https://images.pexels.com/photos/17910326/pexels-photo-17910326.jpeg?cs=srgb&dl=pexels-nadja-17910326.jpg&fm=jpg);
+                 background-size: cover;
+                 background-position: center center;
+                 background-repeat: no-repeat">
+              <div style="padding: 20px 80px;">
+                <div class="row">
+                  <!--RISO ALLO ZAFFERANO-->
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+                    <div class="card-piatto">
+                      <div class="piatto-container" style="position: relative;">
+                        <img class="piatto-immagine"
+                             src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty">
+                        <p class="piatto-nome">RISO ALLO ZAFFERANO</p>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#riso-zafferano-modal"
+                                style="position: absolute; bottom: 10px; right: 20px;">
+                          DETTAGLI
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--RISOTTO AI FUNGHI-->
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+                    <div class="card-piatto">
+                      <div class="piatto-container" style="position: relative;">
+                        <img class="piatto-immagine"
+                             src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg">
+                        <p class="piatto-nome">RISOTTO AI FUNGHI</p>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#riso-funghi-modal"
+                                style="position: absolute; bottom: 10px; right: 20px;">
+                          DETTAGLI
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--RISOTTO ALLA CREMA DI SCAMPI-->
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+                    <div class="card-piatto">
+                      <div class="piatto-container" style="position: relative;">
+                        <img class="piatto-immagine"
+                             src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg">
+                        <p class="piatto-nome">RISOTTO ALLA CREMA DI SCAMPI</p>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#riso-scampi-modal"
+                                style="position: absolute; bottom: 10px; right: 20px;">
+                          DETTAGLI
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--RISOTTO AL POMODORO-->
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+                    <div class="card-piatto">
+                      <div class="piatto-container" style="position: relative;">
+                        <img class="piatto-immagine"
+                             src="https://www.misya.info/wp-content/uploads/2017/09/riso-pomodoro.jpg">
+                        <p class="piatto-nome">RISOTTO AL POMODORO</p>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#riso-pomodoro-modal"
+                                style="position: absolute; bottom: 10px; right: 20px;">
+                          DETTAGLI
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--PIZZA-->
+            <div class="carousel-item"
+                 style="background-image: url(https://preview.redd.it/5vltlvdi2dqy.jpg?auto=webp&s=11b3f7edb856611608a3c710f8b6faf01e0e12c9);
+                 background-size: cover;
+                 background-position: center center;
+                 background-repeat: no-repeat">
+              <p style="font-size: 40px; font-family: Poppins sans-serif; text-align: center; color: #f8f9fa">PIZZA</p>
+              <div style="padding: 20px 80px;">
+                <div class="row">
+                  <!--MARGHERITA-->
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+                    <div class="card-piatto">
+                      <div class="piatto-container" style="position: relative;">
+                        <img class="piatto-immagine"
+                             src="https://it.ooni.com/cdn/shop/articles/Margherita-9920.jpg?crop=center&height=915&v=1644590028&width=1200">
+                        <p class="piatto-nome">PIZZA MARGHERITA</p>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#margherita-modal"
+                                style="position: absolute; bottom: 10px; right: 20px;">
+                          DETTAGLI
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--DIAVOLA-->
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+                    <div class="card-piatto">
+                      <div class="piatto-container" style="position: relative;">
+                        <img class="piatto-immagine"
+                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAyQ04S0E20A558tm4rzYs8fNqWbR4FtBZA&s">
+                        <p class="piatto-nome">PIZZA ALLA DIAVOLA</p>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#diavola-modal"
+                                style="position: absolute; bottom: 10px; right: 20px;">
+                          DETTAGLI
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--CAPRICCIOSA-->
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+                    <div class="card-piatto">
+                      <div class="piatto-container" style="position: relative;">
+                        <img class="piatto-immagine"
+                             src="https://www.ricettedalmondo.it/images/foto-ricette/p/29241-pizza-capricciosa.jpg">
+                        <p class="piatto-nome">PIZZA CAPRICCIOSA</p>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#capricciosa-modal"
+                                style="position: absolute; bottom: 10px; right: 20px;">
+                          DETTAGLI
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--PIZZA QUATTRO FORMAGGI-->
+                  <div class="col-12 col-sm-12 col-md-6 col-xl-3 p-0">
+                    <div class="card-piatto">
+                      <div class="piatto-container" style="position: relative;">
+                        <img class="piatto-immagine"
+                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Pizza_quattro_formaggi_at_restaurant%2C_Chalk_Farm_Road%2C_London.jpg/1200px-Pizza_quattro_formaggi_at_restaurant%2C_Chalk_Farm_Road%2C_London.jpg">
+                        <p class="piatto-nome">PIZZA QUATTRO FORMAGGI</p>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#quattro-formaggi-modal"
+                                style="position: absolute; bottom: 10px; right: 20px;">
+                          DETTAGLI
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--PULSANTI CAROSELLO-->
+      <div style=" width: 1680px; height: 45px; position: absolute; bottom: 300px; right: 0px" class="d-none d-xl-block">
+        <!-- Pulsante freccia sinistra -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-primi" data-bs-slide="prev"
+                style="position: absolute; left: 5px; background-color: darkgrey; width: 40px; height: 40px; border-radius: 50%;">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <!-- Pulsante freccia destra -->
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-primi" data-bs-slide="next"
+                style="position: absolute; right: 5px; background-color: darkgrey; width: 40px; height: 40px; border-radius: 50%;">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
+
+<!--DETTAGLI PIATTI-->
+<div>
+  <!--dettagli antipasti di terra-->
+  <div class="modal fade" id="antipasti-terra-modal" tabindex="-1" aria-labelledby="antipasti-terra-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <!--finestra-->
+      <div class="modal-content"style="height: 100%; width:100%" >
+        <!--titolo-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="antipasti-terra-modal-label" style="font-size: 25px">ANTIPASTI DI TERRA</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--carosello-->
+          <div id="carousel-antipasti-terra" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Immagine 1 -->
+              <div class="carousel-item active">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/1c/d3/d2/antipasto-misto-di-terra.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 2 -->
+              <div class="carousel-item">
+                <img src="https://dalmonellopizzeria.it/wp-content/uploads/ANTIPASTO-SALUMI-E-BUFALA-560x560.jpeg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 3 -->
+              <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcknr11TNdId92Y-grIEeIdhWHcwiYEDH5Tw&s"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+            </div>
+            <!-- Controlli del carosello -->
+            <!--indietro-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#ccarousel-antipasti-terra" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </button>
+            <!--avanti-->
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-antipasti-terra" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+          <!-- Fine del carosello -->
+          <!--testo dettagli-->
+          <p>Antipasti misti di terra per 4 persone</p>
+          <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >10€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--dettagli bruschette-->
+  <div class="modal fade" id="bruschette-modal" tabindex="-1" aria-labelledby="bruschette-modal-label" aria-hidden="true">
+    <!--finestra-->
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content"style="height: 100%; width:100%" >
+        <!--titolo-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="bruschette-modal-label" style="font-size: 25px">BRUSCHETTE MISTE</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!--corpo-->
+        <div class="modal-body">
+          <!--carosello-->
+          <div id="carousel-bruschette" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Immagine 1 -->
+              <div class="carousel-item active">
+                <img src="https://www.giallozafferano.it/images/ricette/223/22329/foto_hd/hd650x433_wm.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 2 -->
+              <div class="carousel-item">
+                <img src="https://www.fattoincasadabenedetta.it/wp-content/uploads/2019/06/Ante-Sito-6.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 3 -->
+              <div class="carousel-item">
+                <img src="https://cdn.cook.stbm.it/thumbnails/ricette/145/145247/hd1600x900.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+            </div>
+            <!-- Controlli del carosello -->
+            <!--indietro-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-bruschette" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </button>
+            <!--avanti-->
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-bruschette" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+          <!-- Fine del carosello -->
+          <!--testo dettagli-->
+          <p>6 pz di bruschette miste</p>
+          <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >5€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--dettagli antipasti di mare-->
+  <div class="modal fade" id="antipasti-mare-modal" tabindex="-1" aria-labelledby="antipasti-mare-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <!--finestra-->
+      <div class="modal-content"style="height: 100%; width:100%" >
+        <!--titolo-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="antipasti-mare-modal-label" style="font-size: 25px">ANTIPASTI DI MARE</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--carosello-->
+          <div id="carousel-antipasti-mare" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Immagine 1 -->
+              <div class="carousel-item active">
+                <img src="https://blog.giallozafferano.it/eleme/wp-content/uploads/2020/02/Antipasto-di-pesce-10-gusti.png"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 2 -->
+              <div class="carousel-item">
+                <img src="https://i.ytimg.com/vi/LwPsN662XUE/maxresdefault.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 3 -->
+              <div class="carousel-item">
+                <img src="https://www.unmondodisapori.it/wp-content/uploads/2020/05/antipasti-misti-%E2%82%AC1600.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+            </div>
+            <!-- Controlli del carosello -->
+            <!--indietro-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#ccarousel-antipasti-mare" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </button>
+            <!--avanti-->
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-antipasti-mare" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+          <!-- Fine del carosello -->
+          <!--testo dettagli-->
+          <p>Antipasto misto di mare per 4 persone</p>
+          <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >10€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--dettagli riso allo zafferano-->
+  <div class="modal fade" id="riso-zafferano-modal" tabindex="-1" aria-labelledby="riso-zafferano-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <!--finestra-->
+      <div class="modal-content"style="height: 100%; width:100%" >
+        <!--titolo-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="riso-zafferano-modal-label" style="font-size: 25px">RISO ALLO ZAFFERANO</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--carosello-->
+          <div id="carousel-riso-zafferano" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Immagine 1 -->
+              <div class="carousel-item active">
+                <img src="https://media-assets.lacucinaitaliana.it/photos/61fbdba12c2fe9743efe8a2a/1:1/w_1600%2Cc_limit/empty"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 2 -->
+              <div class="carousel-item">
+                <img src="https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2022/10/risotto-allo-zafferano.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 3 -->
+              <div class="carousel-item">
+                <img src="https://www.fattoincasadabenedetta.it/wp-content/uploads/2024/04/risotto-allo-zafferano-sito-5.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+            </div>
+            <!-- Controlli del carosello -->
+            <!--indietro-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-riso-zafferano" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </button>
+            <!--avanti-->
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-riso-zafferano" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+          <!-- Fine del carosello -->
+          <!--testo dettagli-->
+          <p>Dettagli del piatto: Riso cucinato con zafferano e altri ingredienti freschi...</p>
+          <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >10€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--dettagli lasagna-->
+  <div class="modal fade" id="lasagna-modal" tabindex="-1" aria-labelledby="lasagna-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <!--finestra-->
+      <div class="modal-content"style="height: 100%; width:100%" >
+        <!--titolo-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="lasagna-modal-label" style="font-size: 25px">LASAGNA</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--carosello-->
+          <div id="carousel-lasagna" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Immagine 1 -->
+              <div class="carousel-item active">
+                <img src="https://it.santokuknives.co.uk/cdn/shop/articles/Lasagne_300-557617.jpg?v=1724841861&width=1920"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 2 -->
+              <div class="carousel-item">
+                <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipes%2F2024-11-lasagna-recipe%2Flasagna-recipe-115"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 3 -->
+              <div class="carousel-item">
+                <img src="https://newmansown.com/wp-content/uploads/2022/03/Homemade-lasagna.png"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+            </div>
+            <!-- Controlli del carosello -->
+            <!--indietro-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#ccarousel-lasagna" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </button>
+            <!--avanti-->
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-lasagna" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+          <!-- Fine del carosello -->
+          <!--testo dettagli-->
+          <p>pasta sfoglia, carne macinata, salsa béchamel, pomodoro, cipolla, e parmigiano</p>
+          <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >12€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--dettagli riso scampi-->
+  <div class="modal fade" id="riso-scampi-modal" tabindex="-1" aria-labelledby="riso-scampi-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <!--finestra-->
+      <div class="modal-content"style="height: 100%; width:100%" >
+        <!--titolo-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="riso-scampi-modal-label" style="font-size: 25px">RISOTTO ALLA CREMA DI SCAMPI</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--carosello-->
+          <div id="carousel-riso-scampi" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Immagine 1 -->
+              <div class="carousel-item active">
+                <img src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/09/risotto-crema-scampifb.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 2 -->
+              <div class="carousel-item">
+                <img src="https://blog.giallozafferano.it/nocemoscata/wp-content/uploads/2015/11/RISOTTO-CREMA-SCAMPI-FB-1-1.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 3 -->
+              <div class="carousel-item">
+                <img src="https://www.moltofood.it/wp-content/uploads/2023/10/risotto-crema-scampi-riso-primo-primi.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+            </div>
+            <!-- Controlli del carosello -->
+            <!--indietro-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#ccarousel-riso-scampi" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </button>
+            <!--avanti-->
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-riso-scampi" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+          <!-- Fine del carosello -->
+          <!--testo dettagli-->
+          <p>Riso, scampi freschi, brodo di pesce, delicata crema preparata con panna, burro e vino bianco</p>
+          <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >14€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--dettagli riso funghi-->
+  <div class="modal fade" id="riso-funghi-modal" tabindex="-1" aria-labelledby="riso-funghi-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <!--finestra-->
+      <div class="modal-content"style="height: 100%; width:100%" >
+        <!--titolo-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="riso-funghi-modal-label" style="font-size: 25px">RISOTTO AI FUNGHI</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--carosello-->
+          <div id="carousel-riso-funghi" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Immagine 1 -->
+              <div class="carousel-item active">
+                <img src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 2 -->
+              <div class="carousel-item">
+                <img src="https://www.chezuppa.com/wp-content/uploads/2021/10/risotto-funghi-porcini02.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 3 -->
+              <div class="carousel-item">
+                <img src="https://lh5.googleusercontent.com/proxy/nesAXiNmBPHKaNDr51ThMl6Ox8wSOAmD-gC-rlCKAMKJ49Jq1po0uQJil-ml13iPyS_7iUUQk7SASxOrLH1dyeR-WFhItakW_rz0NRt8y9X8nQ6eEKZc1XKm"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+            </div>
+            <!-- Controlli del carosello -->
+            <!--indietro-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#ccarousel-riso-funghi" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </button>
+            <!--avanti-->
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-riso-funghi" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+          <!-- Fine del carosello -->
+          <!--testo dettagli-->
+          <p>riso Arborio, funghi freschi, brodo vegetale, burro, cipolla, vino bianco e parmigiano grattugiato</p>
+          <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px" >12€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--dettagli pasta cacio e pepe-->
+  <div class="modal fade" id="pasta-cacio-pepe-modal" tabindex="-1" aria-labelledby="pasta-cacio-pepe-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <!--finestra-->
+      <div class="modal-content" style="height: 100%; width:100%">
+        <!--titolo-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="pasta-cacio-pepe-modal-label" style="font-size: 25px">PASTA CACIO E
+            PEPE</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--carosello-->
+          <div id="carousel-pasta-cacio-pepe" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Immagine 1 -->
+              <div class="carousel-item active">
+                <img
+                  src="https://blog.giallozafferano.it/dulcisinforno/wp-content/uploads/2021/01/Pasta-cacio-e-pepe-2634.jpg"
+                  class="d-block w-100"
+                  style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 2 -->
+              <div class="carousel-item">
+                <img
+                  src="https://dietamediterraneapicetto.altervista.org/wp-content/uploads/2021/11/Pasta-cacio-e-pepe-2-scaled.jpg"
+                  class="d-block w-100"
+                  style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 3 -->
+              <div class="carousel-item">
+                <img
+                  src="https://d15j9y5wlusr11.cloudfront.net/filehub/image/0a70d0a1-5cd4-4b77-b235-0eaa440d5377/16186/recipe.jpg"
+                  class="d-block w-100"
+                  style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+            </div>
+            <!-- Controlli del carosello -->
+            <!--indietro-->
+            <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carousel-pasta-cacio-pepe" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </button>
+            <!--avanti-->
+            <button class="carousel-control-next" type="button"
+                    data-bs-target="#carousel-pasta-cacio-pepe" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+          <!-- Fine del carosello -->
+          <!--testo dettagli-->
+          <p>Diverse tipologie di pasta cacioe e pepe</p>
+          <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px">
+            11€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--dettagli pizza marghierita-->
+  <div class="modal fade" id="margherita-modal" tabindex="-1" aria-labelledby="margherita-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <!--finestra-->
+      <div class="modal-content" style="height: 100%; width:100%">
+        <!--titolo-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="pizza-modal-label" style="font-size: 25px">PIZZA</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--carosello-->
+          <div id="carousel-margherita" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Immagine 1 -->
+              <div class="carousel-item active">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/800px-Eq_it-na_pizza-margherita_sep2005_sml.jpg"
+                  class="d-block w-100"
+                  style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 2 -->
+              <div class="carousel-item">
+                <img
+                  src="https://latteriasorrentina.com/wp-content/uploads/2019/06/come-fare-la-vera-pizza-1764x882.jpg"
+                  class="d-block w-100"
+                  style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 3 -->
+              <div class="carousel-item">
+                <img src="https://www.guardini.com/images/guardinispa/ricette/full/pizza_basilico.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+            </div>
+            <!-- Controlli del carosello -->
+            <!--indietro-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-pmargherita"
+                    data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </button>
+            <!--avanti-->
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-margherita"
+                    data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+          <!-- Fine del carosello -->
+          <!--testo dettagli-->
+          <p>Pizza con gusti a scelta</p>
+          <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px">
+            10€/15€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--dettagli pasta carbonara-->
+  <div class="modal fade" id="pasta-carbonara-modal" tabindex="-1" aria-labelledby="pasta-carbonara-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <!--finestra-->
+      <div class="modal-content" style="height: 100%; width:100%">
+        <!--titolo-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="pasta-carbonara-modal-label" style="font-size: 25px">PASTA ALLA
+            CARBONARA</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--carosello-->
+          <div id="carousel-pasta-carbonara" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Immagine 1 -->
+              <div class="carousel-item active">
+                <img
+                  src="https://www.mamablip.com/storage/Traditional-Spaghetti-alla-Carbonara_1131611747132.jpg"
+                  class="d-block w-100"
+                  style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 2 -->
+              <div class="carousel-item">
+                <img src="https://www.casapappagallo.it/storage/17105/carbonara.JPG"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 3 -->
+              <div class="carousel-item">
+                <img
+                  src="https://blog.giallozafferano.it/dulcisinforno/wp-content/uploads/2021/03/Carbonara-ricetta-5328.jpg"
+                  class="d-block w-100"
+                  style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+            </div>
+            <!-- Controlli del carosello -->
+            <!--indietro-->
+            <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carousel-pasta-carbonara" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </button>
+            <!--avanti-->
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-pasta-carbonara"
+                    data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+          <!-- Fine del carosello -->
+          <!--testo dettagli-->
+          <p>Riso, scampi freschi, brodo di pesce, delicata crema preparata con panna, burro e vino
+            bianco</p>
+          <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px">
+            14€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--dettagli amatriciana-->
+  <div class="modal fade" id="pasta-amatriciana-modal" tabindex="-1" aria-labelledby="pasta-amatriciana-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <!--finestra-->
+      <div class="modal-content" style="height: 100%; width:100%">
+        <!--titolo-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="pasta-amatriciana-modal-label" style="font-size: 25px">PASTA
+            ALL'AMATRICIANA</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--carosello-->
+          <div id="carousel-pasta-amatriciana" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Immagine 1 -->
+              <div class="carousel-item active">
+                <img
+                  src="https://www.giallozafferano.it/images/219-21923/Spaghetti-all-Amatriciana_650x433_wm.jpg"
+                  class="d-block w-100"
+                  style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 2 -->
+              <div class="carousel-item">
+                <img src="https://www.todis.it/wp-content/uploads/2023/09/pasta-allamatriciana.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+              <!-- Immagine 3 -->
+              <div class="carousel-item">
+                <img src="https://www.petitchef.it/imgupl/recipe/466811p744072.jpg"
+                     class="d-block w-100"
+                     style="height: 500px; object-fit: cover; border-radius: 20px;margin-bottom: 20px">
+              </div>
+            </div>
+            <!-- Controlli del carosello -->
+            <!--indietro-->
+            <button class="carousel-control-prev" type="button"
+                    data-bs-target="#ccarousel-pasta-amatriciana" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </button>
+            <!--avanti-->
+            <button class="carousel-control-next" type="button"
+                    data-bs-target="#carousel-pasta-amatriciana" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+          <!-- Fine del carosello -->
+          <!--testo dettagli-->
+          <p>riso Arborio, funghi freschi, brodo vegetale, burro, cipolla, vino bianco e parmigiano
+            grattugiato</p>
+          <p style="font-weight: bold; font-size: 30px; position: absolute; right: 20px; bottom: 5px">
+            12€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
